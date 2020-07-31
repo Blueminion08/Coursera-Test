@@ -1,9 +1,91 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-<head>
-<tite> Hello Coursera</title>
-</head>
-<body>
-<h1>Hello Coursera</h1>
-</body>
+    <head>
+	<title>Sign-Up</title> 
+	<link rel="stylesheet" href="signup.css">
+
+    </head>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+    </head>
+    <script>
+function validateForm() {
+  var x = document.forms["myForm"]["username"].value;
+  var y = document.forms["myForm"]["password"].value;
+  if (x == "" || y=="") {
+    alert("all fields must be filled");
+    return false;
+  }
+}
+</script>
+    <body> 
+<center>
+    <div id="loginform">
+            <form id="Login" action="login.jsp" onsubmit="return validateForm()">
+	<div class="signup"> 
+		<fieldset style="width:90%">
+			<legend>Customer Sign Up</legend> 
+			<table border="0"> 
+				<tr> 
+					<form method="POST" > 
+						<td>
+                            UserName
+                        </td>
+                        
+                         <td>
+                             <input type="text" name="username">
+                             
+                        </td>
+						</tr> 
+						<tr> 
+							<td>
+                            Password
+                        </td>
+                        
+                         <td>
+                             <input type="password" name="password">
+                             
+                        </td>
+						</tr> 
+						
+						<tr>
+                        <td>
+                            Select
+                        </td>
+                        
+                         <td>
+                             <select name="option" id="optq">
+                                 <option>
+                                     Admin
+                                 </option>
+                                 
+                                 <option>
+                                     Customer
+                                 </option>
+                             </select>
+                             
+                        </td>
+                    </tr>               
+                     <tr>					
+                         <td>
+				<button class="btn btn-primary btn-block btn-large" >Register</button>
+			</td> 
+                    </tr> 
+					</form> 
+				</table> 
+			</fieldset> 
+		</div>
+		</center> 
+    </div>
+	</body> 
+    
 </html>
